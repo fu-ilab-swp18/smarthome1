@@ -1,0 +1,31 @@
+
+<form (submit)="sensorEventQuery()">
+<br>
+
+<button type="submit" class="btn btn-primary btn-lg" value="query">Refresh</button>
+
+<br><br>
+
+<div *ngFor="let sensorEvent of sensorEvents.slice().reverse()">
+    <div *ngIf="!sensorEvent.old"> 
+    <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{sensorEvent.sensor.name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Smart Postbox</h4>
+          <p class="card-text">You have new Post (#{{sensorEvent.time}})</p>
+        </div>
+      </div>
+    </div> 
+    <div *ngIf="sensorEvent.old"> 
+      <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{sensorEvent.sensor.name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Smart Postbox</h4>
+          <p class="card-text">You have new Post (#{{sensorEvent.time}})</p>
+        </div>
+      </div>
+      </div>
+</div>
+
+
+</form>

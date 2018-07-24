@@ -1,0 +1,79 @@
+<p></p>
+<fieldset>
+<legend>Settings</legend>
+<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="container-fluid">
+  <!-- Selection for on/off Notification-->
+  <div class="form-group">
+    <h3>
+  Enable or  Disable Notifications
+  <small class="text-muted">for sensor events.</small>
+</h3>
+    <p></p>
+    <div class="form-group">
+    <div class="custom-control custom-radio">
+      <input id="customRadio1" name="customRadio" class="custom-control-input" checked="" type="radio">
+      <label class="custom-control-label" for="customRadio1">Enable Notifications</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input id="customRadio2" name="customRadio" class="custom-control-input" type="radio">
+      <label class="custom-control-label" for="customRadio2">Disable Notifications</label>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="container-fluid">
+  <!-- Timer settings for deleting Notifications-->
+  <form name="delNotTimerForm">
+    <h3>
+  Delete Notifications
+  <small class="text-muted">after set amount of days.</small>
+</h3>
+    <p></p>
+     <input type="range" name="delNotTimer" id="delNotTimer" value="7" min="1" max="28" oninput="delNotTimerOut.value = delNotTimer.value">
+     <output name="delNotTimerOut" id="delNotTimerOut">7</output>
+     <p>
+       <button type="button" class="btn btn-primary">Confirm</button>
+     </p>
+  </form>
+</div>
+</div>
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="container-fluid">
+  
+  <div class="modal-header">
+    <h3>Change Password <span class="extra-title muted"></span></h3>
+</div>
+<div class="modal-body form-horizontal">
+    <div class="control-group">
+        <input class="form-control" id="password" name="new_password" type="password" placeholder="Current password" [(ngModel)]="credentials.current_password">
+        <!--
+        <label for="current_password" class="control-label">Current Password</label>
+        <div class="controls">
+            <input type="password" name="current_password">
+        </div>-->
+    </div>
+    <div class="control-group">
+        <input class="form-control" id="password" name="new_password" type="password" placeholder="New password" [(ngModel)]="credentials.new_password">
+        <!--<label for="new_password" class="control-label">New Password</label>
+        <div class="controls">
+            <input type="password" name="new_password">
+        </div>-->
+    </div>
+    <div class="control-group">
+        <input class="form-control" id="password" name="confirm_password" type="password" placeholder="Confirm password" [(ngModel)]="credentials.confirm_password">
+        <!--<label for="confirm_password" class="control-label">Confirm Password</label>
+        <div class="controls">
+            <input type="password" name="confirm_password">
+        </div>-->
+    </div>      
+</div>
+<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+
+</div>
+</div>
+</fieldset>

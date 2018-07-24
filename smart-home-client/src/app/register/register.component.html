@@ -1,0 +1,45 @@
+<!-- Commit Comment -->
+<div style="margin-left: 1em;">
+<p></p>
+<form (submit)="register()">
+  <fieldset>
+    <legend>Register</legend>
+
+    <!-- Example Email -->
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com" type="text">
+      </div>
+    </div>
+
+    <!-- Email Registration Entry-->
+    <div class="form-group">
+      <label for="address">Email address</label>
+      <input class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter email" type="text" name="address" [(ngModel)]="user.address">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <!-- Username Registration Entry-->
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input class="form-control" id="username" placeholder="Username" type="text" name="username"[(ngModel)]="user.username">
+    </div>
+
+          <!-- Device Token Registration Entry-->
+          <div class="form-group">
+            <label for="deviceToken">Device token</label>
+            <input class="form-control" id="deviceToken" placeholder="Device token" type="text" name="deviceToken"[(ngModel)]="user.deviceToken">
+          </div>
+
+    <!-- Password Registration Entry-->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control" id="password" placeholder="Password" type="password" name="password" [(ngModel)]="user.password">
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary" value="Register">Submit</button>
+</fieldset>
+</form>
+</div>

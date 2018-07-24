@@ -1,0 +1,20 @@
+
+<form (submit)="alcSensorEventQuery()">
+<br>
+
+<button type="submit" class="btn btn-primary btn-lg" value="query">Refresh</button>
+
+<br><br>
+
+<div *ngFor="let alcSensorEvent of alcSensorEvents">
+    <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{alcSensorEvent.alcSensor.name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Smart Alkohol</h4>
+          <p class="card-text">You have new Alkohol (#{{alcSensorEvent.value}})</p>
+        </div>
+      </div>
+</div>
+
+
+</form>

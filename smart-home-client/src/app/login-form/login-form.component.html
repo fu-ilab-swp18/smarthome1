@@ -1,0 +1,27 @@
+<div style="margin-left: 1em;">
+<p> </p>
+<form (submit)="loginUser()">
+<fieldset>
+<legend> Login </legend>
+
+<!-- Username -->
+<div class="form-group">
+  <!-- <label for="username"> Username </label> -->
+  <input class="form-control" id="username" name="username" type="text" placeholder="Username" [(ngModel)]="credentials.username">
+</div>
+
+<!-- Password -->
+<div class="form-group">
+  <!-- <label for="password"> Password </label> -->
+  <input class="form-control" id="password" name="password" type="password" placeholder="Password" [(ngModel)]="credentials.password">
+</div>
+
+<!-- Submit Button-->
+<button type="submit" class="btn btn-primary btn-lg" value="Login">Submit</button>
+</fieldset>
+</form>
+<p></p>
+<!--TODO Register Button-->
+<button type="button" class="btn btn-primary btn-lg" routerLink="register">>Register</button>
+<small id="registerPrompt" class="form-text text-muted">Not registered yet? Click Here!</small>
+</div>
